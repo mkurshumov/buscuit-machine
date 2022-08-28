@@ -1,0 +1,17 @@
+<div class="switch">
+  <i
+    (click)="start()"
+    class="fa-4x fa-solid fa-circle-play"
+    [ngClass]="{ active: state === switchState.on }"
+  ></i>
+  <i
+    (click)="pause()"
+    class="fa-4x fa-solid fa-circle-pause"
+    [ngClass]="{ active: state === switchState.pause }"
+  ></i>
+  <i
+    (click)="stop()"
+    class="fa-4x fa-solid fa-circle-stop"
+    [ngClass]="{ active: state === switchState.off }"
+  ></i>
+</div>

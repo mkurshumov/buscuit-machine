@@ -1,0 +1,7 @@
+<div (click)="toggle()" class="motor">
+  <i class="fa-4x fa-solid fa-toggle-on" *ngIf="isOn"></i>
+  <i class="fa-4x fa-solid fa-toggle-off" *ngIf="!isOn"></i>
+  <div>
+    {{ isOn ? "ON" : "OFF" }}
+  </div>
+</div>

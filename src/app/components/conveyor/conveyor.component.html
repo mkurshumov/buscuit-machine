@@ -1,0 +1,62 @@
+<div class="conveyor">
+  <div class="row first-row">
+    <div class="flex center-x center-y">
+      <i class="fa-3x fa-solid fa-droplet" *ngIf="steps[0] || steps[3]"></i>
+    </div>
+    <div class="flex center-x center-y">
+      <i class="fa-3x fa-solid fa-stamp" *ngIf="steps[3]"></i>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="row second-row">
+    <div class="flex center-y center-x">
+      <i class="fa-3x fa-solid fa-poop" *ngIf="steps[1] || steps[4]"></i>
+    </div>
+    <div class="flex center-y center-x">
+      <i class="fa-3x fa-solid fa-cookie" *ngIf="steps[4]"></i>
+      <i class="fa-3x fa-solid fa-poop" *ngIf="steps[2] || steps[3]"></i>
+    </div>
+    <div class="flex center-y center-x">
+      <i class="fa-3x fa-solid fa-cookie" *ngIf="tick > 5"></i>
+    </div>
+    <div class="flex center-y center-x">
+      <i class="fa-3x fa-solid fa-cookie fa-fade" *ngIf="tick > 6"></i>
+    </div>
+    <div class="flex center-y center-x">
+      <i
+        class="fa-3x fa-solid fa-cookie fa-fade saddle-brown"
+        *ngIf="tick > 7"
+      ></i>
+    </div>
+    <div class="flex center-y center-x">
+      <i class="fa-3x fa-solid fa-cookie saddle-brown" *ngIf="tick > 8"></i>
+    </div>
+    <div class="flex center-y center-x">
+      <i
+        class="fa-3x fa-solid fa-cookie saddle-brown last-cookie"
+        *ngIf="tick > 9"
+      ></i>
+    </div>
+  </div>
+  <div class="platform absolute">
+    <div class="inner-container">
+      <i
+        class="fa-solid fa-cog"
+        [ngClass]="{ 'fa-spin': isConveyorOn }"
+        style="--fa-animation-duration: 15s"
+      ></i>
+      <i
+        class="fa-solid fa-cog"
+        [ngClass]="{ 'fa-spin': isConveyorOn }"
+        style="--fa-animation-duration: 15s"
+      ></i>
+    </div>
+  </div>
+  <div class="basket">
+    <i class="fa-4x fa-solid fa-basket-shopping"></i>
+  </div>
+</div>

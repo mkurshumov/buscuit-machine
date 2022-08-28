@@ -1,0 +1,13 @@
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .fa-solid:hover {
+    cursor: pointer;
+  }
+
+  .active {
+    color: green;
+  }
+}

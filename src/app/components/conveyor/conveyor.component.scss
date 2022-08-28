@@ -1,0 +1,60 @@
+.conveyor {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    position: absolute;
+    height: 100px;
+
+    .fa-cookie,
+    .fa-poop,
+    .fa-droplet {
+      color: #b68f45;
+    }
+
+    .fa-stamp {
+      color: darkgray;
+    }
+  }
+
+  .first-row {
+    top: 160px;
+  }
+
+  .second-row {
+    top: 205px;
+  }
+
+  .platform {
+    top: 277px;
+    width: 87%;
+
+    .inner-container {
+      border: 3px solid black;
+      display: flex;
+      justify-content: space-between;
+      padding: 3px;
+      border-radius: 50px;
+    }
+  }
+
+  .saddle-brown {
+    color: saddlebrown !important;
+  }
+
+  .last-cookie {
+    position: absolute;
+    bottom: 0px;
+    right: 14px;
+  }
+
+  .basket {
+    position: absolute;
+    color: darkgray;
+    bottom: 110px;
+    right: 0px;
+  }
+}

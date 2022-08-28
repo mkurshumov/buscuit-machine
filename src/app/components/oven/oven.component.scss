@@ -1,0 +1,55 @@
+.oven {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  display: flex;
+  border-top: 5px solid black;
+  padding: 38px 5px 0 5px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: lightgray;
+  padding: 18px 5px 0 5px;
+
+  .inner-oven {
+    height: 65px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    padding: 5px;
+    margin-top: 20px;
+    background: white;
+
+    .heating-element {
+      width: 100%;
+      height: 7px;
+      background: gray;
+      border-radius: 10px;
+    }
+  }
+
+  .off {
+    color: gray;
+  }
+
+  .on {
+    color: green;
+  }
+
+  .overheat {
+    color: red;
+  }
+
+  .light-red {
+    background: lightcoral !important;
+  }
+
+  .red {
+    background: red !important;
+  }
+}
+
+.up-time {
+  position: absolute;
+  right: 51px;
+  top: -135px;
+}

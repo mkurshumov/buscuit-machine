@@ -1,0 +1,43 @@
+<div class="oven">
+  <div class="flex space-between">
+    <div>
+      <i
+        class="fa-solid fa-circle off"
+        [ngClass]="{
+          on: oven.isOn,
+          overheat: oven.isOverheated,
+          'fa-fade': oven.isOverheated
+        }"
+      ></i>
+    </div>
+
+    <div>
+      {{ temperature }}°
+      <i
+        class="fa-solid fa-temperature-arrow-up"
+        *ngIf="oven.isOn && temperature > 0 && temperature < 200"
+      ></i>
+      <i
+        class="fa-solid fa-temperature-arrow-down"
+        *ngIf="!oven.isOn && temperature > 0 && temperature < 200"
+      ></i>
+      <i
+        class="fa-solid fa-temperature-three-quarters"
+        *ngIf="temperature === 0 || temperature === 200 || temperature > 200"
+      ></i>
+    </div>
+  </div>
+
+  <div class="inner-oven">
+    <div
+      class="heating-element"
+      [ngClass]="{
+        'fa-fade': temperature > 0 && temperature < 200,
+        'light-red': temperature > 0 && temperature < 200,
+        red: temperature >= 200 && temperature <= 260
+      }"
+    ></div>
+  </div>
+</div>
+
+<div class="up-time">tick: {{ upTime }}</div>
